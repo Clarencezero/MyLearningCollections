@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/eureka
+spring:
+  application:
+    name: product
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.5.5/springclouddb?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+#    hibernate:
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+server:
+  port: 8081

@@ -1,0 +1,29 @@
+spring:
+  profiles: peer1
+  application:
+    name: eureka-a
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/
+    register-with-eureka: false
+
+## 1.Eureka包含client和server,所以需要把自己也添加到注册中心
+#eureka:
+#  instance:peer1
+#  client:
+#    service-url:
+#      defaultZone: http://peer2/eureka/
+#    # 这个选项就是排除自身
+#    register-with-eureka: false
+#  server:
+#    # 关闭ureka自我保护机制,生产环境开启
+#    enable-self-preservation: false
+#spring:
+#  application:
+#    name: EUREKA
+##server:
+##  port: 8761
+

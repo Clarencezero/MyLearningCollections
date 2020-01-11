@@ -1,0 +1,11 @@
+# 1.Eureka包含client和server,所以需要把自己也添加到注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  # 自定义链接
+  instance:
+    hostname: clientName
+spring:
+  application:
+    name: EUREKA_CLI
